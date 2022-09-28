@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&family=Poppins:ital,wght@0,200;1,200&display=swap');
+
+body{
+    background-color: rgb(245, 240, 187);
+    font-family: 'Crimson Text', serif;
+}
+
+
+.titulo{
+font-size: 32px;
+}
+
+#seleccionar-mascota{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tarjetas{
+    display: flex;
+    gap: 10px;
+    
+    
+}
+
+.tarjetas label{
+    background-color: rgb(191, 151, 66);
+    width: 180px;
+    height: 100px;
+    padding: 10px;
+    box-sizing: border-box;
+    margin: 10px;
+    border:2px solid rgb(97, 72, 28);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.tarjetas label img{
+    width: 80px;
+}
+input{
+    display: none;
+}
+input:checked + label{                                                     /*el + sirve para seleccionar también al elemento hermano siguiente*/
+                                                                            /*en este caso los inputs con sus respectivos labels*/
+    background-color: rgb(141, 103, 0);                                                                        
+}
+button{
+    background-color: rgb(230, 179, 37);
+    width: 100px;
+    height: 40px;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-top: 20px;
+    border-radius: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}
+
+#seleccionar-ataque{
+    flex-direction: column;
+    align-items: center;
+}
+.boton-ataque{
+    margin: 30px;
+    width: 150px;
+}
+
+.divVidas{
+    display: grid;
+    grid-template-columns: 15em 15em;
+    margin:1em;
+    max-width: 100%;
+    min-height: 100%;
+}
+.divVidas p{
+    font-size: 1em;
+}
+
+#msj-container{
+    display: flex;
+    flex-direction: column;
+}
+#msj-titulos{
+    display: flex;
+}
+
+#contenedor-ataques{
+    text-align: center;
+}
+
+#mensajes-ataques, #ataques-jugador, #ataques-enemigo{
+    display: flex;
+    gap: 10px;
+    justify-content: space-around;
+}
+
+#ataques-jugador, #ataques-enemigo, #mensajes{
+    flex-direction: column;
+}
+#mensajes{
+    text-align: center;
+}
+
+#ver-mapa {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#botonesMapa div{
+    width: 80px;
+    margin: 10px;
+}
+
+
+
+
+@media (max-width: 560px){
+    #contenedor-tarjetas{
+        display: flex;
+        flex-direction: column;
+    }
+    
+}
+
+@media (max-width: 360px){
+    #ver-mapa div{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    #mensajes-ataques{
+        justify-content: space-evenly;
+    }
+    .divVidas{
+        display: flex;
+        flex-direction: column;
+    }
+}
+

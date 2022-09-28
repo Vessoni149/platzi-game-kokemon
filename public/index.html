@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>KOKEMON!</title>
+      <!-- <script src="./kokemonjs/kokemon.js"></script>                       el script se va a cargar aca antes que el resto del html, entonces si en js queremos seleccionar un 
+                                                                            elemento del DOM no vamos a poder xq todavia no va a existir, para evitar esto puede o ponerse el script 
+                                                                            al final del body o indicarle en el archivo js que luego de cargar el avegador se ejecuten las funciones 
+                                                                            correspondientes-->
+    <link rel="stylesheet" href="./style.css">                                   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        
+        <section id="seleccionar-mascota">
+            <h1 class="titulo">Kokemon!</h1>
+            <h2 class="subtitulo">Elige tu kokemon:</h2>
+            <div id="contenedor-tarjetas" class="tarjetas">
+                <!--<input type="radio" name="mascota" id="hipodoge" />
+                <label  for="hipodoge">
+                    <p>Hipodoge</p>
+                    <img src="./assets/mokepons_mokepon_hipodoge_attack.webp" alt="">
+                </label>                                                            <!-el tipo de input radio se selecciona uan vez y no puede quitarse la seleccion, a menso que haya otros
+                                                                                    inputs con el mismo nombre, asi html entiende que se tratan de inputs de una misma seccion y que solo 
+                                                                                    puede ser seleccionado uno->
+                
+                <input type="radio" name="mascota" id="capipepo" />
+                <label  for="capipepo">
+                    <p>Capipepo</p>
+                    <img src="./assets/mokepons_mokepon_capipepo_attack.webp" alt="">
+                </label>                                                            <!-el label sirve para describir el input, y para poder seleccionar el input dandole clic al texto del
+                                                                                    label existe el atributo "for" que sirve para vincular el label con el input a traves del id del input->
+                
+                <input type="radio" name="mascota" id="ratigueya" />
+                <label  for="ratigueya">
+                    <p>Ratigueya</p>
+                    <img src="./assets/mokepons_mokepon_ratigueya_attack.webp" alt="">
+                </label>-->
+                
+
+            </div>
+            <button id="btn-mascota">Seleccionar</button>
+        </section>
+
+        <section id="ver-mapa">
+            <h2 class="titulo">Recorre el mapa con tu mokepon</h2>
+            <canvas id="mapa"></canvas>                                                                     <!--canvas es una etiqueta que crea un rectangulo donde podemos dibujar con js-->
+            <button 
+                ontouchstart="moverArriba()"
+                ontouchend="detenerMovimiento()" 
+                onmouseup="detenerMovimiento()" 
+                onmousedown="moverArriba()"
+            >Arriba</button>
+            <div id="botonesMapa">
+                <button 
+                    ontouchstart="moverIzquierda()" 
+                    ontouchend="detenerMovimiento()" 
+                    onmouseup="detenerMovimiento()" 
+                    onmousedown="moverIzquierda()"
+                >Izquierda</button>
+                <button 
+                    ontouchstart="moverAbajo()"
+                    ontouchend="detenerMovimiento()" 
+                    onmouseup="detenerMovimiento()" 
+                    onmousedown="moverAbajo()"
+                >Abajo</button>
+                <button 
+                    ontouchstart="moverDerecha()" 
+                    ontouchend="detenerMovimiento()" 
+                    onmouseup="detenerMovimiento()"
+                    onmousedown="moverDerecha()"
+                >Derecha</button>
+            </div>
+        </section>
+
+        <section id="seleccionar-ataque">
+            <h1 class="titulo">Kokemon!</h1>
+            <h2 >Elige tus ataques:</h2>
+            <div id="contenedor-ataques">
+                
+            </div>
+
+             
+            <div id="msj-container">
+              
+                <div id="mensajes-ataques">
+                    <div id="ataques-jugador"></div>
+                    <div id="ataques-enemigo"></div>
+                    
+                </div>
+                <div class="divVidas" id="div-vidas">                                             
+                    <p>Tu mascota <span id="mascota-jugador"></span> tiene<br> <b><span id="vidas-jugador">0</span> <span id="victoriasJ">victorias</span></b></p>
+                    <p>La mascota <span id="mascota-enemigo"></span> del enemigo<br> tiene <b><span id="vidas-enemigo">0</span> <span id="victoriasE">victorias</span></b></p>
+                </div> 
+                <div id="mensajes"></div>
+
+                
+            </div>
+                <section id="reiniciar">
+                    <button id="btn-reiniciar">Reiniciar</button>
+                </section>
+            
+
+
+        </section>
+        
+        
+
+        <script src="./kokemonjs/kokemon.js"></script>                 <!-- el llamado a js puede poner aca porque si estuviera en el head leeria las funciones antes de que los 
+                                                                            elementos que se seleccionan esten leidos x html -que se lee en cascada.   
+                                                                            el . indica que esta dentro de la misma carpeta que este html, luego sigue el nombre de la carpeta que 
+                                                                            está junto al html y luego el archivo que esta dentro de ésta-->
+    
+        </body>
+</html>

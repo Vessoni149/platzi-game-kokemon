@@ -1,0 +1,13 @@
+Al ejecutar npm init en la carpeta donde queremos trabajar, crearemos un proyecto node, que permitira administrar las librerias que usaremos
+En la consola se nos va a preguntar varias cosas:
+{
+  "name": "kokemon",                                            Nombre del paquete
+  "version": "1.0.0",                                           version del proyecto, x defecto es 1 (recien se esta creando)
+  "description": "",                                            descripcion del mismo
+  "main": "index.js",                                           entry point es el archivo a partir del cual va a leer js para empezar a ejecutar el proyecto   
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"       
+  },                                                            tambien pregunta si tenemos un repo de git, palabras clave
+  "author": "Agustin",  
+  "license": "ISC"                                              
+}   
